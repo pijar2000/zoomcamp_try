@@ -1,1 +1,1 @@
-# zoomcamp_try
+# zoomcamp_pijar_personal

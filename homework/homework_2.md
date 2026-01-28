@@ -4,7 +4,7 @@ By Pijar HM
 
 This is my method to solve homework, the answer is not provided here, my answer provided only in zoomcamp homework submit form
 
-### Question 1
+## Question 1
 
 #### Installing Kestra
 
@@ -14,8 +14,6 @@ This is my method to solve homework, the answer is not provided here, my answer 
 cd 02-workflow-orchestration
 docker compose up -d
 ```
-
-![alt text](z2_image_1.png)
 
 Kestra will be pulled in docker, based on docker yaml the we can acces on
 
@@ -40,7 +38,7 @@ pgdatabase:
 
 - the flow name is `05_postgres_taxi.yaml` load the yaml to flow managament with create flow
 
-![alt text](z2_image_2.png)
+<img width="565" height="300" alt="Screenshot 2026-01-28 235904" src="https://github.com/user-attachments/assets/df0ba42a-41b4-4e86-b7d2-7b640cd58dc4" />
 
 - paste the code to flow code
 
@@ -53,7 +51,25 @@ variables:
   table: "public.{{inputs.taxi}}_tripdata"
   data: "{{outputs.extract.outputFiles[inputs.taxi ~ '_tripdata_' ~ (trigger.date | date('yyyy-MM')) ~ '.csv']}}"
 ```
+- You will backfill (it means load the data from exact periode of time to one another), clict trigger then click backfill, fill it to 2019 to 2021 for green and yellow data
 
-- You will backfill (it means load the data from exact periode of time to one another), clict trigger then click backfill, fill it to 2019 to 2021
+- The important think for question 1 is you shoul add bash command in flow code for detect what size it is in kestra folder hidden inside docker
 
-- ![alt text](z2_image_3.png)
+``` yaml
+  - id: extract
+    type: io.kestra.plugin.scripts.shell.Commands
+    outputFiles:
+      - "*.csv"
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+    commands:
+      - wget -qO- https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{{inputs.taxi}}/{{render(vars.file)}}.gz | gunzip > {{render(vars.file)}}
+      - du -b {{render(vars.file)}} | awk '{printf "%.1f MiB\n", $1/1048576}'  # This is bash command to list and look for file size
+```
+- After that you should look onto the Gantt section, you will see the size of the file
+
+<img width="1395" height="902" alt="image" src="https://github.com/user-attachments/assets/6f4f0dad-0fc0-4749-b5ec-f326f8dcfd55" />
+
+
+## Question 2
+

@@ -2,9 +2,10 @@
 
 By Pijar HM
 
-- Make your google project name like this
+- Make your own google project
 
-<img width="1201" height="372" alt="image" src="https://github.com/user-attachments/assets/dc0266dd-99d4-434a-9d48-ffec74f6c55e" />
+<img width="1222" height="712" alt="image" src="https://github.com/user-attachments/assets/5bf73e42-eabe-424e-9373-c45850b05cef" />
+
 
 Then, I use google cli to get credentials
 

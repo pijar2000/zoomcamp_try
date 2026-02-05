@@ -2,7 +2,11 @@
 
 By Pijar HM
 
-I use google cli to get credentials
+- Make your google project name like this
+
+<img width="1201" height="372" alt="image" src="https://github.com/user-attachments/assets/dc0266dd-99d4-434a-9d48-ffec74f6c55e" />
+
+Then, I use google cli to get credentials
 
 - First you should login to google cli with your terminal, in my case i used powershell
 
@@ -41,4 +45,9 @@ credentials = get_credentials()
 client = storage.Client(credentials=credentials, project='project-475f5f46-e321-4ab4-93e')
 ```
 
-- project-475f5f46-e321-4ab4-93e is my project id you should change it to your project id
+- `project-475f5f46-e321-4ab4-93e` is my project id you should change it to your project id
+- After that you can run the script `load_yellow_taxi_data.py`
+
+<img width="1494" height="963" alt="image" src="https://github.com/user-attachments/assets/6514bafd-119c-471c-a4ad-ab6a99ab33cd" />
+
+Check your bucket in google cloud, then you will find something like this

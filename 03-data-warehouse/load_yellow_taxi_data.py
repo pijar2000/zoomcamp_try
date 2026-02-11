@@ -10,7 +10,7 @@ import subprocess
 
 
 # Change this to your bucket name
-BUCKET_NAME = "dezoomcamp_hw3_2026_pijar"
+BUCKET_NAME = "dezoomcamp_2026_pijar_3"
 
 # If you authenticated through the GCP SDK you can comment out these two lines
 # CREDENTIALS_FILE = "gcs.json"

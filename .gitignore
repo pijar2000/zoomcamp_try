@@ -1,0 +1,30 @@
+# --- GOOGLE CLOUD & CREDENTIALS ---
+# Melindungi semua file JSON (biasanya berisi Service Account Keys)
+*.json
+# Jika kamu menyimpan file kunci di folder khusus
+keys/
+credentials/
+
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+.env
+
+# --- TERRAFORM ---
+# Jika kamu pakai Terraform di module awal Zoomcamp
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# --- JUPYTER NOTEBOOK ---
+.ipynb_checkpoints
+
+# --- OS & IDE ---
+.DS_Store
+.vscode/
+.idea/

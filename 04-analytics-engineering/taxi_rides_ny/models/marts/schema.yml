@@ -31,6 +31,13 @@ models:
       contract:
         enforced: true
     columns:
+      - name: payment_type
+        description: Payment type (1=Credit card, 2=Cash, 3=No charge, 4=Dispute, 5=Unknown)
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5]
+                quote: false
       - name: trip_id
         description: Unique trip identifier
         data_type: string
@@ -48,7 +55,7 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['Green', 'Yellow']
+                values: ["Green", "Yellow"]
           - not_null
       - name: rate_code_id
         description: Final rate code

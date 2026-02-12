@@ -6,8 +6,8 @@ from google.cloud import storage
 from google.api_core.exceptions import NotFound, Forbidden
 import time
 
-BUCKET_NAME = "dezoomcamp_2026_pijar_3"
-CREDENTIALS_FILE = "zoomcamp-pijar-3-key.json"  
+BUCKET_NAME = "dezoomcamp_2026_pijar_3" #ganti dengan nama bucket pribadi
+CREDENTIALS_FILE = "zoomcamp-pijar-3-key.json"  #ganti dengan kredensial GCP service account pribasi
 
 try:
     client = storage.Client.from_service_account_json(CREDENTIALS_FILE)
@@ -70,7 +70,7 @@ def upload_to_gcs(file_path, max_retries=3):
             
             if verify_gcs_upload(blob_name):
                 print(f"Verifikasi sukses: gs://{BUCKET_NAME}/{blob_name}")
-                # Hapus file lokal setelah upload berhasil untuk hemat disk
+                # Hapus file lokal, hemat disk
                 os.remove(file_path) 
                 return
             else:

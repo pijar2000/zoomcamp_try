@@ -18,7 +18,7 @@ sources:
       error_after: { count: 48, period: hour }
     tables:
       - name: green_tripdata
-        identifier: green_tripdata_2019_2020 #nama tabelmu
+        identifier: green_tripdata_2019_2020 #nama tabel kita
         description: Raw green taxi trip records
         loaded_at_field: lpep_pickup_datetime
         columns:
@@ -62,7 +62,7 @@ sources:
             description: E-hail fee
 
       - name: yellow_tripdata
-        identifier: yellow_tripdata_2019_2020 #nama tabelmu
+        identifier: yellow_tripdata_2019_2020 #nama tabel kita
         description: Raw yellow taxi trip records
         loaded_at_field: tpep_pickup_datetime
         columns:

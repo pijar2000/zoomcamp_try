@@ -28,3 +28,62 @@ Happy modeling!
 [0m19:25:48.520416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F22CA7CC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F25A4F0440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F25A6B6C00>]}
 [0m19:25:48.520416 [debug] [MainThread]: Flushing usage events
 [0m19:25:50.320287 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:53:29.457768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC25197410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC255B0860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC25195370>]}
+
+
+============================== 07:53:29.474804 | 658d0fd1-e60d-4115-bfb1-93ed8b16fede ==============================
+[0m07:53:29.474804 [info ] [MainThread]: Running with dbt=1.11.4
+[0m07:53:29.474804 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\pijar2000\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init zoomcamp_dbt_try', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m07:53:29.517211 [debug] [MainThread]: Starter project path: C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\include\starter_project
+[0m07:53:29.554672 [info ] [MainThread]: 
+Your new dbt project "zoomcamp_dbt_try" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m07:53:29.556459 [info ] [MainThread]: Setting up your profile.
+[0m07:57:01.251900 [error] [MainThread]: Encountered an error:
+
+[0m07:57:01.336823 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pijar2000\AppData\Local\Programs\Python\Python312\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m07:57:01.340776 [debug] [MainThread]: Command `dbt init` failed at 07:57:01.339772 after 212.03 seconds
+[0m07:57:01.340776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC255B0860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC535298E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AC26860B60>]}
+[0m07:57:01.341776 [debug] [MainThread]: Flushing usage events
+[0m07:57:03.361478 [debug] [MainThread]: An error was encountered while trying to flush usage events

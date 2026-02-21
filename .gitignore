@@ -28,3 +28,4 @@ ENV/
 .DS_Store
 .vscode/
 .idea/
+.bruin.yml

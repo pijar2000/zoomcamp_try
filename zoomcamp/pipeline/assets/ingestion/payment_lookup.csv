@@ -1,4 +1,4 @@
-payment_type_id,payment_description
+payment_type_id,payment_type_name
 0,flex_fare
 1,credit_card
 2,cash

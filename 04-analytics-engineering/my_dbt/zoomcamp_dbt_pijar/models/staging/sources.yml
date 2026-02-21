@@ -100,3 +100,9 @@ sources:
             description: Improvement surcharge
           - name: total_amount
             description: Total amount charged
+
+      - name: fhv_tripdata
+        description: anything lah
+          Raw FHV (For-Hire Vehicle) trip records for 2019.
+          Data is loaded from GCS parquet files.
+        identifier: fhv_tripdata
